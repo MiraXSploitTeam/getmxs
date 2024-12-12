@@ -24,8 +24,6 @@ header {
 h1 {
     font-size: 4rem;
     color: #00aaff;
-    animation: pop-in 1.5s ease-in-out;
-    letter-spacing: 3px;
 }
 
 nav ul {
@@ -43,36 +41,11 @@ nav ul li a {
     color: #00aaff;
     font-size: 1.2rem;
     text-decoration: none;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-nav ul li a::after {
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 3px;
-    background-color: #ffaa00;
-    bottom: -5px;
-    left: 0;
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.3s ease;
-}
-
-nav ul li a:hover::after {
-    transform: scaleX(1);
-    transform-origin: left;
-}
-
-nav ul li a:hover {
-    color: #ffaa00;
 }
 
 section {
     padding: 80px 20px;
     text-align: center;
-    animation: fade-in 1.5s ease-in-out;
 }
 
 #about h2, 
@@ -81,7 +54,6 @@ section {
     font-size: 2.5rem;
     margin-bottom: 20px;
     color: #ffaa00;
-    animation: slide-down 1s ease-in-out;
 }
 
 p {
@@ -100,14 +72,6 @@ button {
     font-size: 1rem;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
-}
-
-button:hover {
-    background: linear-gradient(135deg, #ffaa00, #ff7700);
-    transform: scale(1.1);
-    box-shadow: 0 20px 40px rgba(255, 170, 0, 0.3);
 }
 
 #keyDisplay {
@@ -116,74 +80,17 @@ button:hover {
     background-color: #1f1f1f;
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    animation: fade-in 2s ease-in-out;
     color: #ffaa00;
 }
 
 /* Glowing Mouse Ball */
 .glow-ball {
     position: absolute;
-    width: 60px;
-    height: 60px;
+    width: 40px;
+    height: 40px;
     background: radial-gradient(circle, rgba(0, 170, 255, 0.7), transparent);
     border-radius: 50%;
     pointer-events: none;
     transform: translate(-50%, -50%);
-    transition: all 0.1s ease-out;
     z-index: 9999;
-}
-
-/* Animations */
-.fade-in {
-    animation: fade-in 2s ease-in-out;
-}
-
-.slide-in {
-    animation: slide-in 1.5s ease-in-out;
-}
-
-@keyframes fade-in {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slide-in {
-    from { transform: translateX(-100%); }
-    to { transform: translateX(0); }
-}
-
-@keyframes slide-down {
-    from { transform: translateY(-50px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
-
-@keyframes pop-in {
-    0% { transform: scale(0.8); opacity: 0; }
-    50% { transform: scale(1.2); opacity: 1; }
-    100% { transform: scale(1); }
-}
-
-/* Footer styles */
-footer {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 20px 0;
-    border-top: 2px solid #00aaff;
-}
-
-footer p {
-    margin: 10px 0;
-    font-size: 1rem;
-    color: #c4c4c4;
-}
-
-footer a {
-    color: #00aaff;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-footer a:hover {
-    color: #ffaa00;
 }
