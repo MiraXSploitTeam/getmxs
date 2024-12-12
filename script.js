@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Key system functionality
     const keyButton = document.getElementById('generateKey');
     const keyDisplay = document.getElementById('keyDisplay');
 
     keyButton.addEventListener('click', function() {
         const key = generateRandomKey();
         keyDisplay.textContent = `Your Key: ${key}`;
-        keyDisplay.classList.add('fade-in');
     });
 
     function generateRandomKey() {
@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
     document.body.appendChild(glowBall);
 
     document.addEventListener('mousemove', (e) => {
-        glowBall.style.left = `${e.clientX}px`;
-        glowBall.style.top = `${e.clientY}px`;
+        glowBall.style.left = `${e.pageX}px`;
+        glowBall.style.top = `${e.pageY}px`;
     });
 });
