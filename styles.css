@@ -10,6 +10,8 @@ body {
     background: linear-gradient(135deg, #1f1f1f, #121212);
     color: #ffffff;
     overflow-x: hidden;
+    position: relative;
+    height: 100vh;
 }
 
 header {
@@ -117,6 +119,19 @@ button:hover {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     animation: fade-in 2s ease-in-out;
     color: #ffaa00;
+}
+
+/* Glowing Mouse Ball */
+.glow-ball {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: radial-gradient(circle, rgba(0, 170, 255, 0.7), transparent);
+    border-radius: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    transition: all 0.1s ease-out;
+    z-index: 9999;
 }
 
 /* Animations */
