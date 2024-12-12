@@ -16,4 +16,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         return result;
     }
+
+    // Glow Ball Effect
+    const glowBall = document.createElement('div');
+    glowBall.classList.add('glow-ball');
+    document.body.appendChild(glowBall);
+
+    document.addEventListener('mousemove', (e) => {
+        glowBall.style.left = `${e.clientX}px`;
+        glowBall.style.top = `${e.clientY}px`;
+    });
 });
