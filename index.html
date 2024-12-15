@@ -12,10 +12,23 @@
         }
 
         body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1e1e2f;
+            font-family: 'Century Gothic', sans-serif;
+            background: url('your-background-image.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #fff;
             text-align: center;
+            overflow: hidden;
+        }
+
+        .glowing-ball {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: #00aaff;
+            border-radius: 50%;
+            box-shadow: 0 0 20px 10px #00aaff;
+            pointer-events: none;
+            transition: transform 0.05s;
         }
 
         header {
@@ -123,6 +136,9 @@
     </style>
 </head>
 <body>
+
+    <div class="glowing-ball"></div>
+
     <header>
         <h1>MiraXSploit</h1>
         <nav>
@@ -164,5 +180,17 @@
     <footer>
         <p>&copy; 2024 MiraXSploit. All Rights Reserved.</p>
     </footer>
+
+    <script>
+        const glowingBall = document.querySelector('.glowing-ball');
+
+        document.addEventListener('mousemove', (e) => {
+            const x = e.clientX;
+            const y = e.clientY;
+
+            glowingBall.style.transform = `translate(${x - 10}px, ${y - 10}px)`;
+        });
+    </script>
+
 </body>
 </html>
